@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToHome()">
+        <ion-icon name="arrow-back-outline"></ion-icon> 
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="goToHome()">
+          <ion-icon name="arrow-back-outline"></ion-icon> 
+        </ion-button>
+      </ion-buttons>
+      <ion-title size="large">Recuperar Contraseña</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="recover-container">
+    <div id="recover-text">
+      <h2>Recupera tu Contraseña</h2>
+      <p>Ingresa tu correo electrónico para recibir un enlace para restablecer tu contraseña.</p>
+    </div>
+
+    <div id="recover-form">
+      <form (ngSubmit)="recoverPassword()" #recoverForm="ngForm">
+        <ion-item>
+          <ion-label position="floating">Correo Electrónico</ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit" [disabled]="!recoverForm.form.valid">Enviar Enlace de Recuperación</ion-button>
+      </form>
+    </div>
+
+    
+    <ion-button expand="full" color="medium" (click)="goToLogin()">Volver a Iniciar Sesión</ion-button>
+  </div>
+</ion-content>

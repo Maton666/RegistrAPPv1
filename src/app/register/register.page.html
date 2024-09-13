@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToHome()">
+        <ion-icon name="home-outline"></ion-icon> 
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="goToHome()">
+          <ion-icon name="home-outline"></ion-icon> 
+        </ion-button>
+      </ion-buttons>
+      <ion-title size="large">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="register-container">
+    <form (ngSubmit)="register()" #registerForm="ngForm">
+      <ion-item>
+        <ion-label position="floating">Nombre de Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="name" name="name" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Confirmar Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" type="submit" [disabled]="!registerForm.form.valid || password !== confirmPassword">
+        <span class="button-text">Registrarse</span>
+      </ion-button>
+    </form>
+
+    <p>¿Ya tienes una cuenta? <a routerLink="/login">Inicia sesión aquí</a></p>
+  </div>
+</ion-content>

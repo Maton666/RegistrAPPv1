@@ -1,0 +1,42 @@
+
+#recover-container {
+    padding: 16px;
+    background-color: rgb(13, 6, 73); 
+    color: #FFD700; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  
+  #recover-text {
+    text-align: center; 
+    margin-bottom: 32px; 
+  }
+  
+  
+  #recover-text h2 {
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  
+  #recover-text p {
+    margin-bottom: 24px;
+    font-size: 1.1rem;
+  }
+  
+  
+  #recover-form {
+    width: 100%; 
+    max-width: 500px; 
+  }
+  
+  
+  ion-button {
+    --background: #FFD700; 
+    --color: rgb(13, 6, 73); 
+  }

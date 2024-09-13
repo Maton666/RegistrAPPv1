@@ -1,0 +1,37 @@
+#register-container {
+    padding: 16px;
+    background-color: rgb(13, 6, 73); 
+    color: #FFD700; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  form {
+    width: 100%; 
+    max-width: 500px; 
+  }
+  
+  ion-button {
+    --background: #FFD700; 
+    --color: rgb(13, 6, 73); 
+  }
+  
+  .button-text {
+    color: rgb(13, 6, 73); 
+  }
+  
+  ion-button[color="medium"] {
+    margin-top: 16px; 
+  }
+  
+  a {
+    color: #FFD700; 
+    text-decoration: underline; 
+  }
+  
+  a:hover {
+    color: #F0E68C; 
+  }
