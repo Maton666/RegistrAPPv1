@@ -9,20 +9,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-button (click)="goToHome()">
-          <ion-icon name="home-outline"></ion-icon> 
-        </ion-button>
-      </ion-buttons>
-      <ion-title size="large">Inicio de Sesión</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <div id="login-container">
-    <form (ngSubmit)="login()" #loginForm="ngForm">
+    <!-- Formulario de inicio de sesión -->
+    <form (ngSubmit)="iniciarSesion()" #loginForm="ngForm">
       <ion-item>
         <ion-label position="floating">Correo Electrónico</ion-label>
         <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
@@ -33,14 +23,17 @@
         <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
       </ion-item>
 
+      <!-- Mensaje de error -->
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+      <!-- Botón de inicio de sesión -->
       <ion-button expand="full" type="submit" [disabled]="!loginForm.form.valid">
         <span class="button-text">Iniciar Sesión</span>
       </ion-button>
     </form>
 
+    <!-- Enlace a la página de registro -->
     <p>¿No tienes una cuenta? <a routerLink="/register">Regístrate aquí</a></p>
 
-    
-    <ion-button expand="full" color="medium" (click)="goToRecover()">Recuperar Contraseña</ion-button>
-  </div>
-</ion-content>
+    <!-- Botón de recuperación de contraseña (convertido a routerLink) -->
+    <ion-button>
