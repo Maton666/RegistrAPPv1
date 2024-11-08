@@ -44,13 +44,13 @@ export class MantenedorPage implements OnInit {
       console.log(`Usuario con ID: ${id} eliminado correctamente.`);
       await this.storageService.remove(id);
       console.log(`Usuario con ID: ${id} eliminado del almacenamiento local correctamente.`);
-      this.cargarUsuarios(); // Recargar los usuarios después de eliminar
+      this.cargarUsuarios(); 
     } catch (error) {
       console.error('Error al eliminar el usuario:', error);
     }
   }
 
   irARegistro() {
-    this.navCtrl.navigateForward('/registro');
+    this.navCtrl.navigateForward('/register');
   }
 }
