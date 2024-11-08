@@ -1,13 +1,59 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>mantenedor</ion-title>
+    <ion-title>Mantenedor</ion-title>
+    <ion-back-button fill="clear" slot="start"></ion-back-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">mantenedor</ion-title>
+      <ion-title size="large">Mantenedor</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Mantenedor Usuarios</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Botón para agregar usuario -->
+        <ion-button expand="full" fill="solid" (click)="irARegistro()">
+          Agregar Usuario
+        </ion-button>
+
+        <!-- Lista de usuarios -->
+        <ion-list>
+          <ion-item></ion-item>
+          
+          <ion-grid fixed>
+            <ion-row>
+              <ion-col><strong>Correo Usuario</strong></ion-col>
+              <ion-col><strong>Contraseña Usuario</strong></ion-col>
+              <ion-col><strong>Modificar</strong></ion-col>
+              <ion-col><strong>Eliminar</strong></ion-col>
+            </ion-row>
+
+            <ion-row *ngFor="let usuario of usuarios">
+              <ion-col>{{ usuario.email }}</ion-col>
+              <ion-col>{{ usuario.password }}</ion-col>
+              <ion-col>
+                <ion-button fill="outline" size="small" (click)="modificarUsuario(usuario.id)">
+                  Modificar
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button fill="outline" size="small" (click)="eliminarUsuario(usuario.id)">
+                  Eliminar
+                </ion-button>
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

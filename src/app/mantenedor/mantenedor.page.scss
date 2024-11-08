@@ -1,0 +1,62 @@
+#welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 16px;
+    background-color: #0d0649; /* Fondo púrpura */
+    color: #FFD700; /* Texto dorado */
+    text-align: center;
+  }
+  
+  .card-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 16px;
+    background-color: #0d0649; /* Fondo púrpura en la card */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    color: #FFD700; /* Título dorado */
+    font-weight: bold;
+  }
+  
+  ion-button {
+    --background: #FFD700; /* Fondo dorado */
+    --color: rgb(13, 6, 73); /* Texto oscuro */
+    margin-bottom: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase; /* Mayúsculas para botones */
+  }
+  
+  ion-button:hover {
+    --background: #d4af37; /* Tono dorado más oscuro en hover */
+  }
+  
+  ion-grid {
+    margin-top: 16px;
+  }
+  
+  ion-col {
+    padding: 8px;
+  }
+  
+  strong {
+    color: #FFD700; /* Colores dorados en los encabezados de las columnas */
+    font-weight: bold;
+  }
+  
+  ion-row {
+    margin-bottom: 12px;
+  }
+  
+  ion-item {
+    padding: 8px 0;
+  }
+  
+  
