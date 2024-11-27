@@ -33,9 +33,13 @@ const routes: Routes = [
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule),canActivate: [authGuard]
   },
   {
+    path: 'qrpage',
+    loadChildren: () => import('./qrpage/qrpage.module').then( m => m.QrpagePageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
-  },
+  }
 
 
 ];
