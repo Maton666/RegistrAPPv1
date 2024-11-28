@@ -14,7 +14,6 @@ export class MenuPage implements OnInit {
   qrText = '';
 
   scanResult= '';
-   //Almacena el texto del código escaneado
    constructor(
     private modalController: ModalController,
     private platform: Platform,
@@ -29,13 +28,12 @@ export class MenuPage implements OnInit {
   }
 
   async startScan() {
-    // Crear el modal para iniciar el escaneo
     const modal = await this.modalController.create({
-      component: BarcodeScanningModalComponent, // Componente del modal
+      component: BarcodeScanningModalComponent, 
       cssClass:'barcode-scanning-modal',
       showBackdrop:false,
       componentProps: {
-        formats: ['QR_CODE'], //
+        formats: ['QR_CODE'], 
         lensFacing: LensFacing.Back, // Usa la cámara trasera
       },
     });
@@ -43,7 +41,7 @@ export class MenuPage implements OnInit {
     
     await modal.present();
 
-    // Recoge los datos del código escaneado al cerrar el modal
+    
     const { data } = await modal.onWillDismiss();
 
 
