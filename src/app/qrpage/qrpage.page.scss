@@ -4,3 +4,64 @@
     align-items: center;
     margin: 20px 0;
   }
+  ion-header {
+    background-color: #0d0649; /* Púrpura en el encabezado */
+    color: #FFD700; /* Texto dorado */
+  }
+
+  ion-toolbar {
+    --background: #0d0649; /* Púrpura */
+    --color: #FFD700; /* Texto dorado */
+  }
+
+  ion-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFD700; /* Título dorado */
+  }
+
+  ion-content.menu-container {
+    background-color: #0d0649; /* Fondo púrpura */
+    color: #FFD700; /* Texto dorado */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    padding: 16px;
+  }
+
+  .qr-container {
+    margin-bottom: 20px;
+  }
+
+  ion-item {
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .menu-button {
+    --background: #FFD700; /* Fondo dorado para el botón */
+    --color: rgb(13, 6, 73); /* Texto oscuro en el botón */
+    --border-radius: 8px; /* Bordes redondeados */
+    font-weight: bold;
+    text-transform: uppercase; /* Mayúsculas en el botón */
+    margin-top: 20px; /* Separar del título */
+  }
+
+  .menu-button:hover {
+    --background: #d4af37; /* Tono dorado más oscuro en hover */
+  }
+
+  ion-button {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  ion-input {
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --border-radius: 8px;
+    background-color: #3b3f5c; /* Fondo oscuro para los campos de entrada */
+    color: #FFD700; /* Texto dorado */
+  }
