@@ -10,10 +10,25 @@
       <ion-title size="large">Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <!-- Botón para navegar al Mantenedor -->
   <ion-button expand="full" [routerLink]="'/mantenedor'" class="menu-button">
     Ir a Mantenedor
   </ion-button>
-
+  <div class="container">
+    <h2>Bienvenido,</h2>
+    <ion-button expand="full" (click)="startScan()">
+      Escanear Código
+    </ion-button>
+    <div style="margin-top: 20px;">
+      <ion-button expand="full" [routerLink]="'/qrpage'">
+        Generador Código
+      </ion-button>
+    </div>
+  </div>
+  <ion-item class="result" *ngIf="scanResult" lines="none">
+    <ion-label>
+      <p>Resultado del Escaneo</p>
+      <div>{{scanResult}}</div>
+    </ion-label>       
+  </ion-item>
 </ion-content>
+

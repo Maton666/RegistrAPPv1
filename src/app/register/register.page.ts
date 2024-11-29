@@ -22,21 +22,17 @@ export class RegisterPage {
       return;
     }
 
-    // Crear un objeto para el nuevo usuario
     const nuevoUsuario = {
       email: this.email,
       password: this.password
     };
 
     try {
-      // Llamar al método de la API para agregar el nuevo usuario
       await this.apiService.postUsuarios(nuevoUsuario).toPromise();
 
-      // Redirigir a la página de login después de registrar
       this.router.navigate(['/login']);
       console.log("Usuario agregado a la base de datos");
     } catch (error) {
-      // Manejar errores
       this.errorMessage = 'Error al registrar el usuario. Intenta nuevamente.';
       console.error('Error al registrar usuario: ', error);
     }
