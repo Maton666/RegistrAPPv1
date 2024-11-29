@@ -1,24 +1,30 @@
 {
   "usuarios": [
     {
-      "email": "cris@gmail.com",
-      "password": "cris",
-      "id": "07cr"
-    },
-    {
-      "email": "jason@gmail.com",
-      "password": "jason",
-      "id": "10me"
-    },
-    {
       "id": "bf8b",
       "email": "armasecreta@gmail.com",
       "password": "123456"
     },
     {
+      "id": "19bd",
+      "email": "prueba@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "d652",
+      "email": "juansoto@aaa.com",
+      "password": "1234"
+    },
+    {
+      "id": "b6ce",
+      "email": "registro@aaa.cl",
+      "password": "123"
+    },
+    {
       "id": "4a08",
       "email": "hola@gmail.com",
       "password": "12345"
+
     }
   ]
 }
