@@ -33,7 +33,7 @@ export class MenuPage implements OnInit {
       cssClass:'barcode-scanning-modal',
       showBackdrop:false,
       componentProps: {
-        formats: ['QR_CODE'], 
+        formats: [], 
         lensFacing: LensFacing.Back, // Usa la cámara trasera
       },
     });
