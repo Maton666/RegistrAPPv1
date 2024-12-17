@@ -15,7 +15,7 @@
   </ion-button>
   <div class="container">
     <h2>Bienvenido,</h2>
-    <ion-button expand="full" (click)="startScan()">
+    <ion-button expand="full" (click)="openScanner()">
       Escanear Código
     </ion-button>
     <div style="margin-top: 20px;">
@@ -24,11 +24,5 @@
       </ion-button>
     </div>
   </div>
-  <ion-item class="result" *ngIf="scanResult" lines="none">
-    <ion-label>
-      <p>Resultado del Escaneo</p>
-      <div>{{scanResult}}</div>
-    </ion-label>       
-  </ion-item>
 </ion-content>
 
