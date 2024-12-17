@@ -1,0 +1,55 @@
+:host {
+    display: block;
+  }
+  
+  ion-header {
+    --background: rgb(13, 6, 73); /* Fondo azul oscuro */
+    --color: #ffd700; /* Texto en dorado */
+  }
+  
+  ion-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  ion-toolbar {
+    --padding-start: 16px;
+    --padding-end: 16px;
+  }
+  
+  ion-content {
+    --background: rgba(13, 6, 73, 0.9); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  p {
+    color: #ffd700; /* Texto en dorado */
+    font-size: 16px;
+    text-align: center;
+    margin: 16px 0;
+    font-weight: 500;
+  }
+  
+  ion-button {
+    --background: #ffd700; /* Fondo dorado */
+    --color: rgb(13, 6, 73); /* Texto azul oscuro */
+    margin: 16px auto;
+    display: block;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  ion-button:hover {
+    --background: #e6be00; /* Un tono más oscuro de dorado */
+  }
+  
+  ion-buttons {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  
