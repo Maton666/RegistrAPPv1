@@ -72,4 +72,5 @@ export class MenuPage {
   navigateToQrPage() {
     this.router.navigate(['/qrpage']);
   }
+
 }

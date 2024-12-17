@@ -1,39 +1,48 @@
 :host {
     display: block;
-  }
-  
-  ion-header {
+}
+
+/* Ajustes del encabezado */
+ion-header {
     --background: rgb(13, 6, 73); /* Fondo azul oscuro */
     --color: #ffd700; /* Texto en dorado */
-  }
-  
-  ion-title {
-    font-size: 20px;
+}
+
+/* Ajustes del título */
+ion-title {
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
-  }
-  
-  ion-toolbar {
+}
+
+/* Ajustes de la barra de herramientas */
+ion-toolbar {
     --padding-start: 16px;
     --padding-end: 16px;
-  }
-  
-  ion-content {
+}
+
+/* Ajustes del contenido */
+ion-content {
     --background: rgba(13, 6, 73, 0.9); /* Fondo semitransparente */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  p {
+    padding: 16px; /* Espaciado alrededor */
+    max-width: 100%; /* Evita que se salga del área visible */
+    box-sizing: border-box; /* Para que el padding no haga que el modal sea más grande */
+}
+
+/* Ajustes del texto */
+p {
     color: #ffd700; /* Texto en dorado */
     font-size: 16px;
     text-align: center;
     margin: 16px 0;
     font-weight: 500;
-  }
-  
-  ion-button {
+}
+
+/* Ajustes del botón */
+ion-button {
     --background: #ffd700; /* Fondo dorado */
     --color: rgb(13, 6, 73); /* Texto azul oscuro */
     margin: 16px auto;
@@ -41,15 +50,39 @@
     font-weight: bold;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  ion-button:hover {
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+    max-width: 300px; /* Limita el tamaño máximo del botón */
+}
+
+/* Cambia el color del botón al pasar el mouse */
+ion-button:hover {
     --background: #e6be00; /* Un tono más oscuro de dorado */
-  }
-  
-  ion-buttons {
+}
+
+/* Ajustes de los botones de acción */
+ion-buttons {
     position: absolute;
     top: 8px;
     right: 8px;
-  }
-  
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    ion-content {
+        max-width: 90%; /* Ajusta el modal para que sea más pequeño en pantallas pequeñas */
+        max-height: 80%; /* Limita la altura del modal */
+    }
+
+    ion-title {
+        font-size: 18px; /* Ajusta el tamaño del título */
+    }
+
+    p {
+        font-size: 14px; /* Reduce el tamaño del texto */
+    }
+
+    ion-button {
+        font-size: 14px; /* Ajusta el tamaño del texto del botón */
+        max-width: 80%; /* Ajusta el tamaño máximo del botón */
+    }
+}
