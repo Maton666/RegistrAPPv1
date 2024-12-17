@@ -29,6 +29,11 @@
       "id": "cb8b",
       "email": "prueba5@gmail.com",
       "password": "12345678"
+    },
+    {
+      "id": "0034",
+      "email": "hola@gmail.com",
+      "password": "12345"
     }
   ]
 }
